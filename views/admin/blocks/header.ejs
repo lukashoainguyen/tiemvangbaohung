@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tiệm vàng Bảo Thanh</title>
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/admin.css">
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/verify.css">
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+  <script src="/js/socket.io.js"></script>
+  <script>
+    var myDomain = '<%= myDomain %>';
+  </script>
+  <script src="/js/admin.js"></script>
+</head>
+<body>
+  <div class="admin-template">
+    <div class="left-col">
+      <div class="logo-fr">
+        <h1 class="logo">
+          <img src="/images/logo.png" alt="" class="img-responsive">
+        </h1>
+      </div>
+      <ul class="side-nav">
+        <li>
+          <a href="#">
+            <span class="fa fa-area-chart"></span>
+            Quản lí giá vàng
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="top-nav">
+      <div class="bread-crumb-fr">
+        <ul class="bread-crumb">
+          <li>
+            <a href="#"><%= breadCrumb_1 %></a>
+          </li>
+          <li class="active"><i class='fa fa-angle-right'></i><%= breadCrumb_2 %></li>
+        </ul>
+      </div>
+
+      <div class="status-fr">
+        <div class="user-info">
+          <img src="/images/user-avatar/default.jpg" alt="" class="avatar">
+          <a href="#">Xin chao Admin</a>
+        </div>
+        
+        <div class="log-out-fr">
+          <a href="/dang-xuat" class="btn btn-default log-out-btn">
+            <span class="fa fa-sign-out"></span>
+            Đăng xuất        
+          </a>
+        </div>
+      </div>
+
+      <div class="clearfix"></div>
+    </div>
+
+    <div class="right-col">

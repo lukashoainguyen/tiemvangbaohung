@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bảng giá khách</title>
+  <link rel="shortcut icon" type="image/png" href="/images/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/guess-table-pricing.css">
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+  <script src="/js/socket.io.js"></script>
+  <script>
+    var myDomain = '<%= myDomain %>';
+  </script>
+  <script src="/js/guessTablePricing.js"></script>
+</head>
+<body>
+  <%
+    function formatNumber(num) {
+      var str = num.toString().split('.');
+      if (str[0].length >= 5) {
+          str[0] = str[0].replace(/(\d)(?=(\d{3})+$)/g, '$1.');
+      }
+      if (str[1] && str[1].length >= 5) {
+          str[1] = str[1].replace(/(\d{3})/g, '$1 ');
+      }
+      return str.join('.');
+    }
+  %>
+  <div class="guess-table-pricing-fr">
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th><p>Loại Vàng</p></th>
+            <th><p>Tiệm Mua vào</p></th>
+            <th><p>Tiệm Bán ra</p></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><p>Nhẫn 9999</p></td>
+            <td><p><%= formatNumber(goldPrice.buy9999) %></p></td>
+            <td><p><%= formatNumber(goldPrice.sell9999) %></p></td>
+          </tr>
+          <tr>
+            <td><p>Nữ trang 99.5%</p></td>
+            <td><p><%= formatNumber(goldPrice.buy95_5) %></p></td>
+            <td><p><%= formatNumber(goldPrice.sell95_5) %></p></td>
+          </tr>
+          <tr>
+            <td><p>Nhẫn 95%</p></td>
+            <td><p><%= formatNumber(goldPrice.buy95) %></p></td>
+            <td><p><%= formatNumber(goldPrice.sell95) %></p></td>
+          </tr>
+          <tr>
+            <td><p>Nữ Trang 68%</p></td>
+            <td><p><%= formatNumber(goldPrice.buy68) %></p></td>
+            <td><p><%= formatNumber(goldPrice.sell68) %></p></td>
+          </tr>
+          <tr>
+            <td><p>Nữ Trang 61%</p></td>
+            <td><p><%= formatNumber(goldPrice.buy61) %></p></td>
+            <td><p><%= formatNumber(goldPrice.sell61) %></p></td>
+          </tr>
+          <tr>
+            <td><p>Nữ Trang 41.6%</p></td>
+            <td><p><%= formatNumber(goldPrice.buy41_6) %></p></td>
+            <td><p><%= formatNumber(goldPrice.sell41_6) %></p></td>
+          </tr>
+          <tr>
+            <td><p>Nữ Trang 75%g</p></td>
+            <td><p><%= formatNumber(goldPrice.buy75_g) %></p></td>
+            <td><p><%= formatNumber(goldPrice.sell75_g) %></p></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,100 @@
+.guess-table-pricing-fr {
+  height: 1080px;
+  overflow: hidden;
+}
+.guess-table-pricing-fr thead tr th,
+.guess-table-pricing-fr tbody tr td {
+  margin: 0;
+  padding: 0;
+}
+.guess-table-pricing-fr thead tr th:first-child p,
+.guess-table-pricing-fr tbody tr td:first-child p {
+  border-left: none;
+}
+.guess-table-pricing-fr thead tr th:last-child p,
+.guess-table-pricing-fr tbody tr td:last-child p {
+  border-right: none;
+}
+.guess-table-pricing-fr thead tr th p,
+.guess-table-pricing-fr tbody tr td p {
+  border-left: solid 1px #d1d1d1;
+  border-right: solid 1px #ffffff;
+  box-sizing: border-box;
+}
+.guess-table-pricing-fr thead tr th {
+  font-size: 70px;
+  background-color: #00bd24;
+  color: #ffe400;
+  text-transform: uppercase;
+  vertical-align: middle;
+  font-family: 'roboto-bold';
+  width: 33.33%;
+  border-bottom: 0;
+}
+.guess-table-pricing-fr thead tr th p {
+  display: block;
+  padding-left: 70px;
+  height: 150px;
+  line-height: 150px;
+  border-bottom: solid 4px #cb8e00;
+  padding-top: 20px;
+}
+.guess-table-pricing-fr thead tr th:first-child p {
+  padding-left: 90px;
+}
+.guess-table-pricing-fr tbody tr:nth-child(even) {
+  background-color: #d9fff0;
+}
+.guess-table-pricing-fr tbody tr:nth-child(odd) {
+  background-color: #fff;
+}
+.guess-table-pricing-fr tbody tr td {
+  border-top: none;
+  vertical-align: middle;
+  color: #fa0000;
+  font-size: 90px;
+  font-family: 'avo-bold';
+}
+.guess-table-pricing-fr tbody tr td:first-child {
+  font-family: 'avo-bold';
+  font-size: 60px;
+  color: #005fed;
+}
+.guess-table-pricing-fr tbody tr td p {
+  padding-left: 170px;
+  display: block;
+  height: 130px;
+  line-height: 130px;
+}
+.guess-table-pricing-fr tbody tr td:first-child p {
+  padding-left: 90px;
+  text-transform: uppercase;
+}
+
+@media all and (max-width: 1700px) {
+  .guess-table-pricing-fr {
+    height: auto;
+  }
+
+  .guess-table-pricing-fr thead tr th {
+    font-size: 50px;
+  }
+
+  .guess-table-pricing-fr thead tr th p {
+    line-height: normal;
+    height: auto;;
+  }
+
+  .guess-table-pricing-fr tbody tr td:first-child {
+    font-size: 30px;
+  }
+
+  .guess-table-pricing-fr tbody tr td {
+    font-size: 30px;
+  }
+
+  .guess-table-pricing-fr tbody tr td p {
+    line-height: normal;
+    height: auto;
+  }
+}

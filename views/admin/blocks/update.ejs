@@ -1,0 +1,196 @@
+<div id="updatePricingTable" class="general pricing-fr update-pricing">
+  <div class="error-mess-fr">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="alert alert-danger alert-dismissable fade in">
+          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+          <i class="fa fa-exclamation-circle"></i> 
+          Đã có lỗi xảy ra! Giá không thay đổi hoặc không đúng định dạng.
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- <div class="success-mess-fr" data-flash-mess="">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="alert alert-danger alert-dismissable fade in">
+          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+          <i class="fa fa-exclamation-circle"></i>
+          <?php echo $updateError; ?>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="pull-left">
+          <h3 class="page-title">
+            <i class="fa fa-area-chart"></i>
+            Cập nhật giá vàng
+          </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <%
+    function formatNumber(num) {
+      var str = num.toString().split('.');
+      if (str[0].length >= 5) {
+          str[0] = str[0].replace(/(\d)(?=(\d{3})+$)/g, '$1.');
+      }
+      if (str[1] && str[1].length >= 5) {
+          str[1] = str[1].replace(/(\d{3})/g, '$1 ');
+      }
+      return str.join('.');
+    }
+  %>
+
+  <div class="content-fr">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="table-fr">
+          <form action="" method="POST" id="updatePicingTable">
+            <table class="table table-responsive">
+              <thead>
+                <tr>
+                  <th>Loại Vàng</th>
+                  <th>Mua vào</th>
+                  <th>Bán ra</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Nhẫn 9999</td>
+                  <td>
+                    <div class="form-group">
+                      <input type="text" class="form-control update-input" value="<%= formatNumber(goldPrice.buy9999) %>" data-old-value="<%= formatNumber(goldPrice.buy9999) %>" name="buy9999">
+                    </div>
+                  </td>
+                  <td>
+                    <div class="form-group">
+                      <input type="text" class="form-control update-input" value="<%= formatNumber(goldPrice.sell9999) %>" data-old-value="<%= formatNumber(goldPrice.sell9999) %>" name="sell9999">
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Nữ Trang 95.5%</td>
+                  <td>
+                  <div class="form-group">
+                      <input type="text" class="form-control update-input" value="<%= formatNumber(goldPrice.buy95_5) %>" data-old-value="<%= formatNumber(goldPrice.buy95_5) %>" name="buy95_5">
+                    </div>
+                  </td>
+                  <td>
+                    <div class="form-group">
+                      <input type="text" class="form-control update-input" value="<%= formatNumber(goldPrice.sell95_5) %>" data-old-value="<%= formatNumber(goldPrice.sell95_5) %>" name="sell95_5">
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Nữ Trang 95%</td>
+                  <td>
+                    <div class="form-group">
+                      <input type="text" class="form-control update-input" value="<%= formatNumber(goldPrice.buy95) %>" data-old-value="<%= formatNumber(goldPrice.buy95) %>" name="buy95">
+                    </div>
+                  </td>
+                  <td>
+                    <div class="form-group">
+                      <input type="text" class="form-control update-input" value="<%= formatNumber(goldPrice.sell95) %>" data-old-value="<%= formatNumber(goldPrice.sell95) %>" name="sell95">
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Nữ Trang 68%</td>
+                  <td>
+                    <div class="form-group">
+                      <input type="text" class="form-control update-input" value="<%= formatNumber(goldPrice.buy68) %>" data-old-value="<%= formatNumber(goldPrice.buy68) %>" name="buy68">
+                    </div>
+                  </td>
+                  <td>
+                    <div class="form-group">
+                      <input type="text" class="form-control update-input" value="<%= formatNumber(goldPrice.sell68) %>" data-old-value="<%= formatNumber(goldPrice.sell68) %>" name="sell68">
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Nữ Trang 61%</td>
+                  <td>
+                    <div class="form-group">
+                      <input type="text" class="form-control update-input" value="<%= formatNumber(goldPrice.buy61) %>" data-old-value="<%= formatNumber(goldPrice.buy61) %>" name="buy61">
+                    </div>
+                  </td>
+                  <td>
+                    <div class="form-group">
+                      <input type="text" class="form-control update-input" value="<%= formatNumber(goldPrice.sell61) %>" data-old-value="<%= formatNumber(goldPrice.sell61) %>" name="sell61">
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                  <td>Nữ Trang 41.6%</td>
+                  <td>
+                    <div class="form-group">
+                      <input type="text" class="form-control update-input" value="<%= formatNumber(goldPrice.buy41_6) %>" data-old-value="<%= formatNumber(goldPrice.buy41_6) %>" name="buy41_6">
+                    </div>
+                  </td>
+                  <td>
+                    <div class="form-group">
+                      <input type="text" class="form-control update-input" value="<%= formatNumber(goldPrice.sell41_6) %>" data-old-value="<%= formatNumber(goldPrice.sell41_6) %>" name="sell41_6">
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Nữ Trang 75%g</td>
+                  <td>
+                    <div class="form-group">
+                      <input type="text" class="form-control update-input" value="<%= formatNumber(goldPrice.buy75_g) %>" data-old-value="<%= formatNumber(goldPrice.buy75_g) %>" name="buy75_g">
+                    </div>  
+                  </td>
+                  <td>
+                    <div class="form-group">
+                      <input type="text" class="form-control update-input" value="<%= formatNumber(goldPrice.sell75_g) %>" data-old-value="<%= formatNumber(goldPrice.sell75_g) %>" name="sell75_g">
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            
+            <div class="row">
+              <div class="col-md-12">
+                <div class="btn-fr">
+                  <div class="pull-right">
+                    <a href="/quan-ly" class="btn btn-default formButton formButtonCancel">Huỷ bỏ</a>
+                    <button type="button" class="btn btn-default formButton formButtonAdd" data-update-pricing-table>Cập nhật</button>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="confirmUpdatePricing" class="modal fade general-modal" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <span class="fa fa-exclamation exclamation-icon"></span>
+        <h4 class="modal-title">Xác nhận tác vụ</h4>
+      </div>
+      <div class="modal-body">
+        <p>Bạn muốn cập nhật bảng giá?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" form="updatePicingTable" value="submit" name="submit" class="btn btn-default formButton formButtonAdd" id="updatePicingTableButton">Xác nhận</button>
+        <button type="button" class="btn btn-default formButton formButtonCancel" data-dismiss="modal">Không</button>
+      </div>
+    </div>
+  </div>
+</div>

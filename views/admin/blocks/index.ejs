@@ -1,0 +1,107 @@
+<div class="general pricing-fr">
+  <!-- <div class="success-mess-fr" data-flash-mess="">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="alert alert-success alert-dismissable fade in">
+          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+          <i class="fa fa-exclamation-circle"></i>
+          Them thanh cong
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="pull-left">
+          <h3 class="page-title">
+            <i class="fa fa-area-chart"></i>
+            Giá vàng hôm nay
+            <!-- <small>Cập nhật: <span class="user"><?php echo extractDate($pricing['pricing_update_full_date']); ?></span> | Vào lúc: <span class="user"><?php echo $pricing['pricing_update_time']; ?></span> | Bởi: <span class="user"><?php echo $pricing['user_full_name']; ?></span></small> -->
+          </h3>
+        </div>
+
+        <div class="pull-right">
+          <a href="/bang-gia-khach" class="btn btn-default general-button popup-pricing-button" target="_blank">
+            <i class="fa fa-desktop"></i>
+            Trình chiếu bảng giá
+          </a>
+          <a href="/quan-ly/cap-nhat" class="btn btn-default general-button add-button">
+            <i class="fa fa-pencil-square-o"></i>Cập nhật bảng giá
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <%
+    function formatNumber(num) {
+      var str = num.toString().split('.');
+      if (str[0].length >= 5) {
+          str[0] = str[0].replace(/(\d)(?=(\d{3})+$)/g, '$1.');
+      }
+      if (str[1] && str[1].length >= 5) {
+          str[1] = str[1].replace(/(\d{3})/g, '$1 ');
+      }
+      return str.join('.');
+    }
+  %>
+
+  <div class="content-fr">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="table-fr">
+          <div class="table-responsive">
+            <table class="table table-margin">
+              <thead>
+                <tr>
+                  <th>Loại Vàng</th>
+                  <th>Mua vào</th>
+                  <th>Bán ra</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Nhẫn 9999</td>
+                  <td><%= formatNumber(goldPrice.buy9999) %></td>
+                  <td><%= formatNumber(goldPrice.sell9999) %></td>
+                </tr>
+                <tr>
+                  <td>Nữ Trang 95.5%</td>
+                  <td><%= formatNumber(goldPrice.buy95_5) %></td>
+                  <td><%= formatNumber(goldPrice.sell95_5) %></td>
+                </tr>
+                <tr>
+                  <td>Nữ Trang 95%</td>
+                  <td><%= formatNumber(goldPrice.buy95) %></td>
+                  <td><%= formatNumber(goldPrice.sell95) %></td>
+                </tr>
+                <tr>
+                  <td>Nữ Trang 68%</td>
+                  <td><%= formatNumber(goldPrice.buy68) %></td>
+                  <td><%= formatNumber(goldPrice.sell68) %></td>
+                </tr>
+                <tr>
+                  <td>Nữ Trang 61%</td>
+                  <td><%= formatNumber(goldPrice.buy61) %></td>
+                  <td><%= formatNumber(goldPrice.sell61) %></td>
+                </tr>
+                <tr>
+                  <td>Nữ Trang 41.6%</td>
+                  <td><%= formatNumber(goldPrice.buy41_6) %></td>
+                  <td><%= formatNumber(goldPrice.sell41_6) %></td>
+                </tr>
+                <tr>
+                  <td>Nữ Trang 75%g</td>
+                  <td><%= formatNumber(goldPrice.buy75_g) %></td>
+                  <td><%= formatNumber(goldPrice.sell75_g) %></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
