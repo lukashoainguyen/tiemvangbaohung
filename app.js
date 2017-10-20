@@ -32,6 +32,14 @@ app.use(session({
   // cookie: { secure: true }
 }));
 
+var request = require('request');
+
+request('https://ipinvestigator.expeditedaddons.com/?api_key=' + process.env.IPINVESTIGATOR_API_KEY + '&ip=68.10.149.45', function (error, response, body) {
+  console.log('Status:', response.statusCode);
+  console.log('Headers:', JSON.stringify(response.headers));
+  console.log('Response:', body);
+});
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);

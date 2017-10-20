@@ -78,6 +78,10 @@ router.post('/quan-ly/cap-nhat', function(req, res, next) {
 });
 
 router.get('/dang-nhap', function(req, res, next) {
+  if (req.session.username) {
+    return res.redirect('/quan-ly');
+  }
+
   res.render('login', { title: 'Đăng nhạp' });
 });
 
