@@ -5,6 +5,8 @@ var goldPriceModel = require('../model/goldprice.js');
 var userModel = require('../model/userModel.js');
 var library = require('../lib/library.js');
 
+var baoHungTitle = ' | Tiệm vàng Bảo Hưng';
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
@@ -13,7 +15,7 @@ router.get('/', function(req, res, next) {
 router.get('/bang-gia-khach', function(req, res, next) {
   goldPriceModel.findOne({}).sort({_id:-1}).then(function(data) {
     res.render('goldTablePrice', {
-      title: 'Bang gia khach',
+      title: 'Bảng giá khách' + baoHungTitle,
       myDomain: library.getHostName(req),
       goldPrice: data
     });
@@ -22,12 +24,12 @@ router.get('/bang-gia-khach', function(req, res, next) {
 
 router.get('/quan-ly', function(req, res, next) {
   if (!req.session.username) {
-    return res.render('404');
-    return;
+    return res.redirect('/dang-nhap');
   }
+
   goldPriceModel.findOne({}).sort({_id:-1}).then(function(data) {
     res.render('admin/index', {
-      title: 'Quản lý',
+      title: 'Quản lý giá vàng' + baoHungTitle,
       myDomain: library.getHostName(req),
       breadCrumb_1: 'Quan ly gia vang',
       breadCrumb_2: 'Gia vang hom nay',
@@ -38,11 +40,11 @@ router.get('/quan-ly', function(req, res, next) {
 
 router.get('/quan-ly/cap-nhat', function(req, res, next) {
   if (!req.session.username) {
-    return res.render('404');
+    return res.redirect('/dang-nhap');
   }
   goldPriceModel.findOne({}).sort({_id:-1}).then(function(data) {
     res.render('admin/update', {
-      title: 'Quản lý',
+      title: 'Cập nhật giá vàng' + baoHungTitle,
       myDomain: library.getHostName(req),
       breadCrumb_1: 'Quan ly gia vang',
       breadCrumb_2: 'Cap nhat gia vang',
@@ -69,8 +71,6 @@ router.post('/quan-ly/cap-nhat', function(req, res, next) {
     sell75_g: library.removeDot(req.body.sell75_g)
   };
 
-  
-
   var dataInsert = new goldPriceModel(item);
   dataInsert.save();
 
@@ -83,7 +83,7 @@ router.get('/dang-nhap', function(req, res, next) {
   }
 
   res.render('login', {
-    title: 'Đăng nhập',
+    title: 'Đăng nhập' + baoHungTitle,
     alert: false
   });
 });
