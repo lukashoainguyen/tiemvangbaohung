@@ -55,108 +55,110 @@
       <div class="col-md-12">
         <div class="table-fr">
           <form action="" method="POST" id="updatePicingTable">
-            <table class="table table-responsive">
-              <thead>
-                <tr>
-                  <th>Loại Vàng</th>
-                  <th>Mua vào</th>
-                  <th>Bán ra</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Nhẫn 9999</td>
-                  <td>
-                    <div class="form-group">
-                      <input type="text" class="form-control update-input" value="<%= formatNumber(goldPrice.buy9999) %>" data-old-value="<%= formatNumber(goldPrice.buy9999) %>" name="buy9999">
-                    </div>
-                  </td>
-                  <td>
-                    <div class="form-group">
-                      <input type="text" class="form-control update-input" value="<%= formatNumber(goldPrice.sell9999) %>" data-old-value="<%= formatNumber(goldPrice.sell9999) %>" name="sell9999">
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Nữ Trang 95.5%</td>
-                  <td>
-                  <div class="form-group">
-                      <input type="text" class="form-control update-input" value="<%= formatNumber(goldPrice.buy95_5) %>" data-old-value="<%= formatNumber(goldPrice.buy95_5) %>" name="buy95_5">
-                    </div>
-                  </td>
-                  <td>
-                    <div class="form-group">
-                      <input type="text" class="form-control update-input" value="<%= formatNumber(goldPrice.sell95_5) %>" data-old-value="<%= formatNumber(goldPrice.sell95_5) %>" name="sell95_5">
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Nữ Trang 95%</td>
-                  <td>
-                    <div class="form-group">
-                      <input type="text" class="form-control update-input" value="<%= formatNumber(goldPrice.buy95) %>" data-old-value="<%= formatNumber(goldPrice.buy95) %>" name="buy95">
-                    </div>
-                  </td>
-                  <td>
-                    <div class="form-group">
-                      <input type="text" class="form-control update-input" value="<%= formatNumber(goldPrice.sell95) %>" data-old-value="<%= formatNumber(goldPrice.sell95) %>" name="sell95">
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Nữ Trang 68%</td>
-                  <td>
-                    <div class="form-group">
-                      <input type="text" class="form-control update-input" value="<%= formatNumber(goldPrice.buy68) %>" data-old-value="<%= formatNumber(goldPrice.buy68) %>" name="buy68">
-                    </div>
-                  </td>
-                  <td>
-                    <div class="form-group">
-                      <input type="text" class="form-control update-input" value="<%= formatNumber(goldPrice.sell68) %>" data-old-value="<%= formatNumber(goldPrice.sell68) %>" name="sell68">
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Nữ Trang 61%</td>
-                  <td>
-                    <div class="form-group">
-                      <input type="text" class="form-control update-input" value="<%= formatNumber(goldPrice.buy61) %>" data-old-value="<%= formatNumber(goldPrice.buy61) %>" name="buy61">
-                    </div>
-                  </td>
-                  <td>
-                    <div class="form-group">
-                      <input type="text" class="form-control update-input" value="<%= formatNumber(goldPrice.sell61) %>" data-old-value="<%= formatNumber(goldPrice.sell61) %>" name="sell61">
-                    </div>
+            <div class="table-responsive">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Loại Vàng</th>
+                    <th>Mua vào</th>
+                    <th>Bán ra</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Nhẫn 9999</td>
+                    <td>
+                      <div class="form-group">
+                        <input type="text" class="form-control update-input" value="<%= formatNumber(goldPrice.buy9999) %>" data-old-value="<%= formatNumber(goldPrice.buy9999) %>" name="buy9999">
+                      </div>
                     </td>
-                </tr>
-                <tr>
-                  <td>Nữ Trang 41.6%</td>
-                  <td>
+                    <td>
+                      <div class="form-group">
+                        <input type="text" class="form-control update-input" value="<%= formatNumber(goldPrice.sell9999) %>" data-old-value="<%= formatNumber(goldPrice.sell9999) %>" name="sell9999">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Nữ Trang 95.5%</td>
+                    <td>
                     <div class="form-group">
-                      <input type="text" class="form-control update-input" value="<%= formatNumber(goldPrice.buy41_6) %>" data-old-value="<%= formatNumber(goldPrice.buy41_6) %>" name="buy41_6">
-                    </div>
-                  </td>
-                  <td>
-                    <div class="form-group">
-                      <input type="text" class="form-control update-input" value="<%= formatNumber(goldPrice.sell41_6) %>" data-old-value="<%= formatNumber(goldPrice.sell41_6) %>" name="sell41_6">
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Nữ Trang 75%g</td>
-                  <td>
-                    <div class="form-group">
-                      <input type="text" class="form-control update-input" value="<%= formatNumber(goldPrice.buy75_g) %>" data-old-value="<%= formatNumber(goldPrice.buy75_g) %>" name="buy75_g">
-                    </div>  
-                  </td>
-                  <td>
-                    <div class="form-group">
-                      <input type="text" class="form-control update-input" value="<%= formatNumber(goldPrice.sell75_g) %>" data-old-value="<%= formatNumber(goldPrice.sell75_g) %>" name="sell75_g">
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+                        <input type="text" class="form-control update-input" value="<%= formatNumber(goldPrice.buy95_5) %>" data-old-value="<%= formatNumber(goldPrice.buy95_5) %>" name="buy95_5">
+                      </div>
+                    </td>
+                    <td>
+                      <div class="form-group">
+                        <input type="text" class="form-control update-input" value="<%= formatNumber(goldPrice.sell95_5) %>" data-old-value="<%= formatNumber(goldPrice.sell95_5) %>" name="sell95_5">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Nữ Trang 95%</td>
+                    <td>
+                      <div class="form-group">
+                        <input type="text" class="form-control update-input" value="<%= formatNumber(goldPrice.buy95) %>" data-old-value="<%= formatNumber(goldPrice.buy95) %>" name="buy95">
+                      </div>
+                    </td>
+                    <td>
+                      <div class="form-group">
+                        <input type="text" class="form-control update-input" value="<%= formatNumber(goldPrice.sell95) %>" data-old-value="<%= formatNumber(goldPrice.sell95) %>" name="sell95">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Nữ Trang 68%</td>
+                    <td>
+                      <div class="form-group">
+                        <input type="text" class="form-control update-input" value="<%= formatNumber(goldPrice.buy68) %>" data-old-value="<%= formatNumber(goldPrice.buy68) %>" name="buy68">
+                      </div>
+                    </td>
+                    <td>
+                      <div class="form-group">
+                        <input type="text" class="form-control update-input" value="<%= formatNumber(goldPrice.sell68) %>" data-old-value="<%= formatNumber(goldPrice.sell68) %>" name="sell68">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Nữ Trang 61%</td>
+                    <td>
+                      <div class="form-group">
+                        <input type="text" class="form-control update-input" value="<%= formatNumber(goldPrice.buy61) %>" data-old-value="<%= formatNumber(goldPrice.buy61) %>" name="buy61">
+                      </div>
+                    </td>
+                    <td>
+                      <div class="form-group">
+                        <input type="text" class="form-control update-input" value="<%= formatNumber(goldPrice.sell61) %>" data-old-value="<%= formatNumber(goldPrice.sell61) %>" name="sell61">
+                      </div>
+                      </td>
+                  </tr>
+                  <tr>
+                    <td>Nữ Trang 41.6%</td>
+                    <td>
+                      <div class="form-group">
+                        <input type="text" class="form-control update-input" value="<%= formatNumber(goldPrice.buy41_6) %>" data-old-value="<%= formatNumber(goldPrice.buy41_6) %>" name="buy41_6">
+                      </div>
+                    </td>
+                    <td>
+                      <div class="form-group">
+                        <input type="text" class="form-control update-input" value="<%= formatNumber(goldPrice.sell41_6) %>" data-old-value="<%= formatNumber(goldPrice.sell41_6) %>" name="sell41_6">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Nữ Trang 75%g</td>
+                    <td>
+                      <div class="form-group">
+                        <input type="text" class="form-control update-input" value="<%= formatNumber(goldPrice.buy75_g) %>" data-old-value="<%= formatNumber(goldPrice.buy75_g) %>" name="buy75_g">
+                      </div>  
+                    </td>
+                    <td>
+                      <div class="form-group">
+                        <input type="text" class="form-control update-input" value="<%= formatNumber(goldPrice.sell75_g) %>" data-old-value="<%= formatNumber(goldPrice.sell75_g) %>" name="sell75_g">
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
             
             <div class="row">
               <div class="col-md-12">
