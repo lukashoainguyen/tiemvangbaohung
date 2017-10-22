@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Đăng nhập</title>
+  <title><%= title %></title>
   <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -22,17 +22,19 @@
           </h1>
         </div>
 
-        <div class="col-md-6 col-md-offset-3 login-fr">
+        <div class="col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1 login-fr">
           <h3>Đăng nhập</h3>
           
           <div class="row">
             <div class="col-md-8 col-md-offset-2">
               <form action="" method="POST">
+                <% if (alert) { %>
                 <div class="alert alert-danger alert-dismissable fade in">
                   <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
                   <i class="fa fa-exclamation-circle"></i>
                   <span> Sai username hoac password</span>
                 </div>
+                <% } %>
 
                 <div class="input-group username-input">
                   <input type="text" class="form-control login-input-style" name="username" placeholder="Tên đăng nhập">

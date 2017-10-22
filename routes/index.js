@@ -82,7 +82,10 @@ router.get('/dang-nhap', function(req, res, next) {
     return res.redirect('/quan-ly');
   }
 
-  res.render('login', { title: 'Đăng nhạp' });
+  res.render('login', {
+    title: 'Đăng nhập',
+    alert: false
+  });
 });
 
 router.get('/dang-xuat', function(req, res, next) {
@@ -101,7 +104,10 @@ router.post('/dang-nhap', function(req, res, next) {
       req.session.username = data.username;
       res.redirect('/quan-ly');
     } else {
-      res.redirect('/dang-nhap');
+      res.render('login', {
+        title: 'Đăng nhập',
+        alert: true
+      });
     }
   });
 });
